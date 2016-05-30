@@ -11,7 +11,7 @@
 
         $.ajax({
             type: "POST",
-            url: 'http://localhost:3000/receiveToken',
+            url: 'http://api.artmanager.com.br/receiveToken',
             data: obj,
             success: function (r, o) {
                 $('#password')[0].value = null;
