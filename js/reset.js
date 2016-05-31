@@ -11,14 +11,14 @@
 
         $.ajax({
             type: "POST",
-            url: 'http://localhost:3000/receiveToken',
+            url: 'http://api.artmanager.com.br/receiveToken',
             data: obj,
             success: function (r, o) {
                 $('#password')[0].value = null;
                 $('#confirm')[0].value = null;
                 if (r.success != null) {
-                    bootbox.alert(r.success, function (t) { console.log(t); })
                     window.location.search = null;
+                    bootbox.alert(r.success, function (t) { console.log(t); })
                 } else {
                     bootbox.alert(r.error, function (t) {
                         console.log(t);
